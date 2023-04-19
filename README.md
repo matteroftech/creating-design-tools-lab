@@ -40,9 +40,11 @@ Upon adding this nudge to our code we'll see that the canvas is creating random 
 While it's interesting that we can randomly add noise to each vertex to create a canvas that's more visually interesting, it'd be useful to manipulate the points it in a more user-controllable way. We will do this using the builtin `mouseX` and `mouseY` variables which dynamically track the position of the mouse. To control the variance in our canvas we will scale the noise based on how close the vertex is to our mouse. To do this we define a new function called `distance_from_mouse` that will return the distance of any x, y coordinate to our mouse.  (Note: I have renamed the local `y_height` variable here for convenience)
 ![](./resources/Screen%20Shot%202023-04-18%20at%209.46.59%20PM.png)
 We now need to find a way to modify the nudge variable such that the value is higher when the distance to the mouse is small, and lower when the distance to the mouse is large. One way to do this is to simply divide by the distance from the mouse.
+
 ![ezgif com-crop](https://user-images.githubusercontent.com/16449141/232960534-269e45d2-38f2-418e-a3d6-23b00b25b211.gif)
 
 As you can see above, despite moving across the canvas, the lines have returned to their orderly state and are not responding to the mouse. This is because we haven't scaled our adjustment correctly, we can do this by adjusting how we use the `distance_from_mouse` result. 
+
 ![ezgif com-crop (1)](https://user-images.githubusercontent.com/16449141/232960555-e9d542e3-0ee8-4b1e-82dc-31a1f2a12e2f.gif)
 
 That's better - we're now able to control the perturbation using our mouse as input. However, our input options are not just limited to the mouse, we could parametrize this canvas in a host of ways. For example, with a quick change to our code to only preturb vertices in the center of our canvas and some color changes we've come close to recreating a famouse generative art album cover:
