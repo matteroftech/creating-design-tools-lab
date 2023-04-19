@@ -5,6 +5,8 @@ We will be using the online p5 editor for lab, you can follow along with the exa
 ### About `p5`
 >p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! p5.js is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.
 
+\- [p5 homepage](https://p5js.org/)
+
 For us, p5 offers a well documented set of tools to help us create a prototype design interface. In this lab, and in general use of the p5 library, it'll be necessary to read the documentation to learn what each function does. You can find the documentation here: https://p5js.org/reference/
 
 The online editor we will be using appears like this:
